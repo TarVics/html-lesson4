@@ -1,0 +1,119 @@
+.layout-document {
+    height: 90vh;
+    min-width: 6rem;
+    margin: 3rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 0.3rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+.layout-cell {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.3rem;
+    font-family: "Droid Serif", sans-serif;
+    background: lightgray;
+    color: black;
+}
+.layout-1 {
+    flex-grow: 1;
+}
+.layout-234567 {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 21;
+    column-gap: 0.5rem;
+}
+.layout-2 {
+    flex-grow: 2;
+}
+.layout-34567 {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 19;
+    row-gap: 0.5rem;
+}
+.layout-3 {
+    flex-grow: 5;
+}
+.layout-4 {
+    flex-grow: 2;
+}
+.layout-56 {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 12;
+    column-gap: 0.5rem;
+}
+.layout-5 {
+    flex-grow: 17;
+}
+.layout-6 {
+    flex-grow: 2;
+}
+.layout-7 {
+    flex-grow: 2;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .layout-1 {
+        flex-grow: 1;
+    }
+    .layout-2 {
+        display: none;
+    }
+    .layout-3 {
+        flex-grow: 4;
+    }
+    .layout-4 {
+        flex-grow: 5;
+    }
+    .layout-56 {
+        flex-direction: column;
+        row-gap: 0.5rem;
+        flex-grow: 10;
+    }
+    .layout-5 {
+        flex-grow: 6;
+    }
+    .layout-6 {
+        flex-grow: 4;
+    }
+    .layout-7 {
+        flex-grow: 2;
+    }
+}
+@media screen and (min-width: 0) and (max-width: 768px) {
+    .layout-1 {
+        flex-grow: 1.5;
+    }
+    .layout-2 {
+        display: none;
+    }
+    .layout-3 {
+        flex-grow: 3;
+    }
+    .layout-4 {
+        flex-grow: 4;
+    }
+    .layout-56 {
+        flex-direction: column;
+        row-gap: 0.5rem;
+        flex-grow: 12;
+    }
+    .layout-5 {
+        flex-grow: 6;
+    }
+    .layout-6 {
+        flex-grow: 6;
+    }
+    .layout-7 {
+        flex-grow: 1.5;
+    }
+}

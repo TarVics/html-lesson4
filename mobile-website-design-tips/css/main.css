@@ -1,0 +1,125 @@
+.layout-document {
+    height: 90vh;
+    width: 90vw;
+    margin: 1rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 0.3rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.layout-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.3rem;
+    font-family: "Droid Serif", sans-serif;
+    background: lightgray;
+    color: black;
+}
+.layout-12 {
+    display: flex;
+    flex-basis: 12%;
+    flex-direction: row;
+    column-gap: 0.5rem;
+}
+.layout-1 {
+    flex-basis: 23%;
+}
+.layout-2 {
+    flex-basis: calc(77% - 0.5rem);
+}
+.layout-3456789 {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.layout-3 {
+    width: 23%;
+    flex-basis: calc(66% - 0.5rem);
+    order: 1;
+}
+.layout-89 {
+    display: flex;
+    flex-basis: 34%;
+    flex-direction: column;
+    gap: 0.5rem;
+    order: 2;
+}
+.layout-8 {
+    flex-basis: 46%;
+}
+.layout-9 {
+    flex-basis: 54%;
+}
+.layout-45 {
+    width: calc(77% - 0.5rem);
+    display: flex;
+    flex-basis: 30%;
+    flex-direction: row;
+    column-gap: 0.5rem;
+    order: 3;
+}
+.layout-4 {
+    flex-basis: 70%;
+}
+.layout-5 {
+    flex-basis: 30%;
+}
+.layout-67 {
+    width: calc(77% - 0.5rem);
+    display: flex;
+    flex-basis: calc(70% - 0.5rem);
+    flex-direction: row;
+    gap: 0.5rem;
+    order: 4;
+}
+.layout-6 {
+    flex-basis: 70%;
+}
+.layout-7 {
+    flex-basis: 30%;
+}
+.layout-10 {
+    flex-basis: 20%;
+}
+@media screen and (min-width: 0) and (max-width: 768px) {
+    .layout-document {
+        height: 131vh;/*90vh * 1.46;*/
+    }
+    .layout-12 {
+        flex-basis: 6%;
+    }
+    .layout-3 {
+        width: 100%;
+        flex-basis: 10%;
+    }
+    .layout-45 {
+        width: 100%;
+        flex-basis: 17%;
+    }
+    .layout-67 {
+        width: 100%;
+        flex-basis: calc(62% - 1.5rem);
+        flex-direction: column;
+    }
+    .layout-89 {
+        flex-basis: 11%;
+        flex-direction: row;
+        order: 5;
+    }
+    .layout-8 {
+        flex-basis: 50%;
+    }
+    .layout-9 {
+        flex-basis: 50%;
+    }
+    .layout-10 {
+        flex-basis: 10%;
+    }
+}
