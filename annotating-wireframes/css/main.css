@@ -1,7 +1,8 @@
 .layout-document {
     height: 90vh;
-    min-width: 6rem;
-    margin: 3rem;
+    min-width: 20rem;
+    min-height: 20rem;
+    margin: 1rem;
     padding: 0.5rem;
     box-sizing: border-box;
     border: 1px solid black;
@@ -12,7 +13,7 @@
     row-gap: 0.5rem;
 }
 .layout-cell {
-    flex-grow: 1;
+    /*flex-grow: 1;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,100 +21,171 @@
     font-family: "Droid Serif", sans-serif;
     background: lightgray;
     color: black;
+    gap: 0.5rem;
 }
 .layout-1 {
-    flex-grow: 1;
+    padding: 0 3rem;
+    flex-basis: 4.6%;
 }
 .layout-234567 {
+    flex-basis: 95.4%;
     display: flex;
     flex-direction: row;
-    flex-grow: 21;
     column-gap: 0.5rem;
 }
 .layout-2 {
-    flex-grow: 2;
+    flex-basis: 20%;
 }
 .layout-34567 {
+    flex-basis: 80%;
     display: flex;
     flex-direction: column;
-    flex-grow: 19;
     row-gap: 0.5rem;
 }
 .layout-3 {
-    flex-grow: 5;
+    flex-basis: 21.75%;
 }
 .layout-4 {
-    flex-grow: 2;
+    flex-basis: 10.85%;
 }
 .layout-56 {
+    flex-basis: 56.75%;
     display: flex;
     flex-direction: row;
-    flex-grow: 12;
     column-gap: 0.5rem;
 }
 .layout-5 {
-    flex-grow: 17;
+    flex-basis: 74.75%;
 }
 .layout-6 {
-    flex-grow: 2;
+    flex-basis: 25.25%;
 }
 .layout-7 {
-    flex-grow: 2;
+    flex-basis: 10.65%;
 }
-
+/***************************************/
+.hidden-checkbox {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+#layout-2-toggle {
+    position: absolute;
+    left: 0.5rem;
+    top: -2.75rem;
+    font-size: 1.5rem;
+    transition: 100ms;
+}
+#layout-2-toggle:hover {
+    background: #e5e5e5;
+    border-radius: 0.3rem;
+    border: 1px outset gray;
+    transition: 500ms;
+    cursor: pointer;
+}
+:checked + #layout-2-toggle {
+    background: #e5e5e5;
+    border-radius: 0.3rem;
+    border: 1px outset gray;
+}
+:checked ~ [role="menu"] {
+    visibility: visible;
+}
+[type="checkbox"]:focus + [role="menu"] {
+    visibility: hidden;
+}
+/***************************************/
 @media screen and (min-width: 768px) and (max-width: 992px) {
+    #layout-2-toggle {
+        top: -2.75rem;
+    }
     .layout-1 {
-        flex-grow: 1;
+        flex-basis: 4.6%;
+    }
+    .layout-234567 {
+        flex-basis: 95.4%;
+        position: relative;
     }
     .layout-2 {
-        display: none;
+        top: -0.5rem;
+        width: 12rem;
+        height: 20rem;
+        visibility: hidden;
+        position: absolute;
+        border:  1px outset white;
+        box-shadow: 0 0 10px rgba(26, 9, 9, 0.4);
+        background: #e5e5e5;
+    }
+    .layout-34567 {
+        flex-basis: 100%;
     }
     .layout-3 {
-        flex-grow: 4;
+        flex-basis: 16.9%;
     }
     .layout-4 {
-        flex-grow: 5;
+        flex-basis: 25.12%;
     }
     .layout-56 {
+        flex-basis: 48.8%;
         flex-direction: column;
         row-gap: 0.5rem;
-        flex-grow: 10;
     }
     .layout-5 {
-        flex-grow: 6;
+        flex-basis: 64.35%;
     }
     .layout-6 {
-        flex-grow: 4;
+        flex-basis: 35.65%;
     }
     .layout-7 {
-        flex-grow: 2;
+        flex-basis: 9.18%;
     }
 }
 @media screen and (min-width: 0) and (max-width: 768px) {
+    #layout-2-toggle {
+        top: -3.4rem;
+    }
     .layout-1 {
-        flex-grow: 1.5;
+        flex-basis: 6.91%;
+    }
+    .layout-234567 {
+        flex-basis: 93.08%;
+        position: relative;
     }
     .layout-2 {
-        display: none;
+        top: -0.5rem;
+        width: 10rem;
+        height: 15rem;
+        visibility: hidden;
+        position: absolute;
+        border:  1px outset white;
+        box-shadow: 0 0 10px rgba(26, 9, 9, 0.4);
+        background: #e5e5e5;
+    }
+    .layout-34567 {
+        flex-basis: 100%;
     }
     .layout-3 {
-        flex-grow: 3;
+        flex-basis: 12.07%;
     }
     .layout-4 {
-        flex-grow: 4;
+        flex-basis: 18.35%;
     }
     .layout-56 {
+        flex-basis: 60.38%;
         flex-direction: column;
         row-gap: 0.5rem;
-        flex-grow: 12;
     }
     .layout-5 {
-        flex-grow: 6;
+        flex-basis: 48%;
     }
     .layout-6 {
-        flex-grow: 6;
+        flex-basis: 52%;
     }
     .layout-7 {
-        flex-grow: 1.5;
+        flex-basis: 6.76%;
     }
 }

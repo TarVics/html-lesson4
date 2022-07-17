@@ -1,6 +1,7 @@
 .layout-document {
     height: 90vh;
-    width: 90vw;
+    min-width: 20rem;
+    min-height: 20rem;
     margin: 1rem;
     padding: 0.5rem;
     box-sizing: border-box;
@@ -9,7 +10,7 @@
     font-size: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    row-gap: 0.5rem;
 }
 .layout-cell {
     display: flex;
